@@ -31,5 +31,6 @@ RUN cd /home/mq/tmp/${KESTREL_GITPROJ}-${KESTREL_GITHASH}; \
 VOLUME ["/var/log/kestrel", "/var/run/kestrel"]
 
 RUN mkdir -p /usr/local/kestrel; \
+  cd /usr/local/kestrel; \
   ln -s /home/mq/tmp/${KESTREL_GITPROJ}-${KESTREL_GITHASH}/dist/kestrel current;
 
